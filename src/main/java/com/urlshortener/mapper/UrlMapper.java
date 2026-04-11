@@ -1,6 +1,5 @@
 package com.urlshortener.mapper;
 
-import com.urlshortener.dto.UrlRequest;
 import com.urlshortener.dto.UrlResponse;
 import com.urlshortener.model.Url;
 import org.springframework.stereotype.Component;
