@@ -9,8 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.net.URI;
-
 @RestController
 @RequestMapping("/shorten")
 @RequiredArgsConstructor
@@ -32,14 +30,12 @@ public class UrlController {
     }
 
     @GetMapping("/{shortCode}")
-    public ResponseEntity<Void> redirect(@PathVariable String shortCode) {
+    public ResponseEntity<String> redirect(@PathVariable String shortCode) {
         log.info(shortCode);
         String longUrl = urlService.getLongUrl(shortCode);
 
         return ResponseEntity
-                .status(HttpStatus.FOUND) // 302
-                .location(URI.create(longUrl))
-                .build();
+                .ok().body(longUrl);
     }
 
     @PutMapping("/{shortCode}")
