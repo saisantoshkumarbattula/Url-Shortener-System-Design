@@ -21,7 +21,4 @@ public class UrlMapper {
                 .accessCount(url.getAccessCount())
                 .build();
     }
-    public Url urlRequestToUrl(UrlRequest urlRequest) {
-        return Url.builder().url(urlRequest.url()).build();
-    }
 }

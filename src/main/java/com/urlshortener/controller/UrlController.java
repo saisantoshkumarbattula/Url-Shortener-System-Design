@@ -2,8 +2,6 @@ package com.urlshortener.controller;
 
 import com.urlshortener.dto.UrlRequest;
 import com.urlshortener.dto.UrlResponse;
-import com.urlshortener.exception.UrlNotFoundException;
-import com.urlshortener.exception.UrlValidationFailureException;
 import com.urlshortener.service.UrlService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
