@@ -32,14 +32,12 @@ public class UrlController {
     }
 
     @GetMapping("/{shortCode}")
-    public ResponseEntity<Void> redirect(@PathVariable String shortCode) {
+    public ResponseEntity<String> redirect(@PathVariable String shortCode) {
         log.info(shortCode);
         String longUrl = urlService.getLongUrl(shortCode);
 
         return ResponseEntity
-                .status(HttpStatus.FOUND) // 302
-                .location(URI.create(longUrl))
-                .build();
+                .ok().body(longUrl);
     }
 
     @PutMapping("/{shortCode}")
