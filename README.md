@@ -1,5 +1,7 @@
 # URL Shortener System Design
 
+> **Note**: This project is a sample solution for the URL Shortening Service challenge from [roadmap.sh](https://roadmap.sh/projects/url-shortening-service)
+
 A highly scalable and performant URL Shortener system implemented with Spring Boot, MongoDB, and Redis. It provides REST APIs to shorten URLs, redirect them to the original destination, track access counts, and perform basic CRUD operations on URLs.
 
 ## 🚀 Features
